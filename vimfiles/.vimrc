@@ -263,6 +263,13 @@ set mouse=a
 " Affiche le numéro des lignes
 set nu
 
+" Templates
+au BufNewFile *.cxx 0r ~/.vim/templates/skeleton.cxx
+au BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+au BufNewFile *.hpp 0r ~/.vim/templates/skeleton.hpp
+au BufNewFile *.gplt 0r ~/.vim/templates/skeleton.gplt
+au BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
+
 " Commente un bloc de code
 autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
 autocmd FileType sh,ruby,python   let b:comment_leader = '# '
@@ -296,3 +303,8 @@ execute pathogen#infect()
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Remplace les accolades par les parenthèses
+noremap ( {
+noremap ) }
+map à @
