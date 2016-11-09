@@ -295,7 +295,7 @@ map <leader>n :bn<cr>
 map <leader>p :bp<cr>
 
 " Permet d'éviter de passer en mode commande
-map q: :q
+noremap q: :q
 
 " vim-pathogen
 execute pathogen#infect()
@@ -308,3 +308,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 noremap ( {
 noremap ) }
 map à @
+
+" Sauvegarder tous les buffers ouverts
+map <leader>wa :wa<cr>
