@@ -261,7 +261,7 @@ endfunction
 set mouse=a
 
 " Affiche le numéro des lignes
-set nu
+set rnu
 
 " Templates
 au BufNewFile *.cxx 0r ~/.vim/templates/skeleton.cxx
@@ -307,7 +307,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Remplace les accolades par les parenthèses
 noremap ( {
 noremap ) }
-map à @
+map Q @q
 
 " Sauvegarder tous les buffers ouverts
 map <leader>wa :wa<cr>
+
+" To start using the ':Man' command before any manual page was loaded
+runtime ftplugin/man.vim
