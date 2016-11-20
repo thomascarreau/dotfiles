@@ -1,0 +1,8 @@
+set terminal postscript eps size 5.0,5.0 enhanced color \
+font 'Helvetica,18' linewidth 2
+set output 'output.eps'
+set grid
+set key on outside
+set title "title"
+set xlabel "xlabel (unit)"
+set ylabel "ylabel (unit)"

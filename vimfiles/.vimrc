@@ -93,7 +93,6 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Enable syntax highlighting
 syntax enable
 
@@ -209,15 +208,6 @@ let g:airline_theme='base16_ashes'
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
-    exe "normal mz"
-    %s/\s\+$//ge
-    exe "normal `z"
-endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
@@ -260,7 +250,8 @@ endfunction
 " Autorise la souris
 set mouse=a
 
-" Affiche le numéro des lignes
+" Affiche nombres relatifs
+set nu
 set rnu
 
 " Templates
@@ -270,19 +261,9 @@ au BufNewFile *.hpp 0r ~/.vim/templates/skeleton.hpp
 au BufNewFile *.gplt 0r ~/.vim/templates/skeleton.gplt
 au BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
 
-" Commente un bloc de code
-autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-autocmd FileType conf,fstab       let b:comment_leader = '# '
-autocmd FileType tex              let b:comment_leader = '% '
-autocmd FileType mail             let b:comment_leader = '> '
-autocmd FileType vim              let b:comment_leader = '" '
-autocmd FileType gnuplot          let b:comment_leader = '# '
-noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
-
 " Associe l'extension .gplt à la syntaxe gnuplot
 autocmd BufRead *.gplt set ft=gnuplot
+autocmd FileType gnuplot setlocal commentstring=#\ %s
 
 " Ez make
 map <leader>m :make!<cr>
@@ -304,7 +285,7 @@ execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Remplace les accolades par les parenthèses
+" Corrige quelques défauts du AZERTY
 noremap ( {
 noremap ) }
 map Q @q
