@@ -8,7 +8,7 @@ Plugins that I use daily :
 * [nerdtree](https://github.com/scrooloose/nerdtree)
 * [vim-airline](https://github.com/vim-airline/vim-airline)
 * [vim-commentary (tpope)](https://github.com/tpope/vim-commentary)
-* [vim-markdown (inspired by Chris Toomey)](https://github.com/thomascarreau/vim-markdown)
+* [vim-markdown (inspired by christoomey)](https://github.com/thomascarreau/vim-markdown)
 
 Inspiration
 -----------
