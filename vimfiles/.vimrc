@@ -4,7 +4,6 @@
 " => Color and Fonts                                          "
 " => Files, backups and undo                                  "
 " => Text, tab and indent related                             "
-" => Visual mode related                                      "
 " => Moving around, tabs, windows and buffers                 "
 " => Status line                                              "
 " => Editing mappings                                         "
@@ -144,15 +143,6 @@ set si "Smart indent
 set wrap "Wrap lines
 
 
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection('f')<CR>
-vnoremap <silent> # :call VisualSelection('b')<CR>
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -263,10 +253,9 @@ au BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
 
 " Associe l'extension .gplt à la syntaxe gnuplot
 autocmd BufRead *.gplt set ft=gnuplot
-autocmd FileType gnuplot setlocal commentstring=#\ %s
 
-" Ez make
-map <leader>m :make!<cr>
+" Permet d'utiliser commentary.vim pour des fichiers gnuplot
+autocmd FileType gnuplot setlocal commentstring=#\ %s
 
 " Désactive l'auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -289,9 +278,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 noremap ( {
 noremap ) }
 map Q @q
-
-" Sauvegarder tous les buffers ouverts
-map <leader>wa :wa<cr>
 
 " To start using the ':Man' command before any manual page was loaded
 runtime ftplugin/man.vim
