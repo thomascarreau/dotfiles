@@ -187,8 +187,8 @@ set viminfo^=%
 set laststatus=2
 
 " vim-airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme='base16_ashes'
+" let g:airline_powerline_fonts = 1
+" let g:airline_theme='base16_ashes'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -255,7 +255,7 @@ au BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
 autocmd BufRead *.gplt set ft=gnuplot
 
 " Permet d'utiliser commentary.vim pour des fichiers gnuplot
-autocmd FileType gnuplot setlocal commentstring=#\ %s
+" autocmd FileType gnuplot setlocal commentstring=#\ %s
 
 " Désactive l'auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -268,11 +268,11 @@ map <leader>p :bp<cr>
 noremap q: :q
 
 " vim-pathogen
-execute pathogen#infect()
+" execute pathogen#infect()
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" map <C-n> :NERDTreeToggle<CR>
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Corrige quelques défauts du AZERTY
 noremap ( {
