@@ -150,10 +150,6 @@ set wrap "Wrap lines
 map j gj
 map k gk
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
-
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
@@ -186,9 +182,8 @@ set viminfo^=%
 " Always show the status line
 set laststatus=2
 
-" vim-airline
-" let g:airline_powerline_fonts = 1
-" let g:airline_theme='base16_ashes'
+" Status line settings
+set statusline=\ %f%m%r%h%w\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -254,9 +249,6 @@ au BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
 " Associe l'extension .gplt à la syntaxe gnuplot
 autocmd BufRead *.gplt set ft=gnuplot
 
-" Permet d'utiliser commentary.vim pour des fichiers gnuplot
-" autocmd FileType gnuplot setlocal commentstring=#\ %s
-
 " Désactive l'auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -266,13 +258,6 @@ map <leader>p :bp<cr>
 
 " Permet d'éviter de passer en mode commande
 noremap q: :q
-
-" vim-pathogen
-" execute pathogen#infect()
-
-" NERDTree
-" map <C-n> :NERDTreeToggle<CR>
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Corrige quelques défauts du AZERTY
 noremap ( {
