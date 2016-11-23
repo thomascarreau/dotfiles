@@ -1,9 +1,9 @@
 myfiles
 =======
 
-Here is the collection of my dotfiles (vim, tmux, and git) and a gnuplot template. No plugins because of portability.
+Here is the collection of my dotfiles (vim, tmux, and git) and a gnuplot template. Even if I use plugins daily, there is no plugins here because of portability.
 
-Plugins that I use daily :
+Plugins that I use :
 
 * [nerdtree](https://github.com/scrooloose/nerdtree)
 * [vim-airline](https://github.com/vim-airline/vim-airline)
