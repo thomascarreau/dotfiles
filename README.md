@@ -10,7 +10,7 @@ Plugins that I use :
 * [vim-commentary (tpope)](https://github.com/tpope/vim-commentary)
 * [vim-surround](https://github.com/tpope/vim-surround)
 * [vim-repeat](https://github.com/tpope/vim-repeat)
-* [vim-mdformattng (inspired by christoomey)](https://github.com/thomascarreau/vim-markdown)
+* [vim-mdformatting (inspired by christoomey)](https://github.com/thomascarreau/vim-markdown)
 
 Inspiration
 -----------
