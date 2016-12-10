@@ -1,0 +1,10 @@
+" Templates
+" ---------
+
+au BufNewFile *.cxx 0r ~/.vim/templates/skeleton.cxx
+au BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+au BufNewFile *.hpp 0r ~/.vim/templates/skeleton.hpp
+au BufNewFile *.gplt 0r ~/.vim/templates/skeleton.gplt
+au BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
+
+" vim:ft=vim

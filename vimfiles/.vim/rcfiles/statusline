@@ -1,0 +1,10 @@
+" Status line configurations
+" --------------------------
+
+" Always show the status line
+set laststatus=2
+
+" Set the status line
+set statusline=\ %f%m%r%h%w\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
+
+" vim:ft=vim

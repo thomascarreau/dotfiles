@@ -1,0 +1,15 @@
+" Editing mappings
+" ----------------
+
+" Remap VIM 0 to first non-blank character
+map 0 ^
+
+" Not wanted command mode
+noremap q: :q
+
+" AZERTY issues
+noremap ( {
+noremap ) }
+noremap Q @q
+
+" vim:ft=vim
