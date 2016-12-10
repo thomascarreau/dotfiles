@@ -13,4 +13,11 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+echo "Installing plugins..."
+vim +PluginInstall +qall
+if [ $? -ne 0 ]; then
+    echo >&2 "ERROR!"
+    exit 1
+fi
+
 echo "Success!"
