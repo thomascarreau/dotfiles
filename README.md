@@ -3,10 +3,14 @@ myfiles
 
 Here is the collection of my dotfiles (vim, tmux, and git) and a gnuplot template.
 
+VIM
+---
+
 Plugins that I use :
 
+* [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
 * [vim-commentary (tpope)](https://github.com/tpope/vim-commentary)
-* [bufexplorer](https://github.com/jlanzarotta/bufexplorer)
+* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 
 **NOTE: Using this VIM configuration requires [Vundle](https://github.com/VundleVim/Vundle.vim).**
 
