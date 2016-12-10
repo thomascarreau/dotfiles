@@ -61,8 +61,10 @@ set tm=500
 set mouse=a
 
 " Hybrid numbers
-set nu
 set rnu
+if v:version > 703
+  set number
+endif
 
 " No auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
