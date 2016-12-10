@@ -1,6 +1,10 @@
 " VIM user interface configurations
 " ---------------------------------
 
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
