@@ -5,6 +5,25 @@
 set laststatus=2
 
 " Set the status line
-set statusline=\ %f%m%r%h%w\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
+set statusline=[%n]     " buffer number
+set statusline+=\ %t    "tail of the filename
+set statusline+=%h      "help file flag
+set statusline+=%m      "modified flag
+set statusline+=%r      "read only flag
+set statusline+=\ %y    "filetype
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l\     "cursor line
+set statusline+=\ %(%)
+set statusline+=\ %(%)
+set statusline+=\ %(%)
+set statusline+=\ %(%)
+set statusline+=\ %(%)
+set statusline+=\ %(%)
+set statusline+=\ %(%)
+set statusline+=\ %(%)
+set statusline+=\ %(%)
+set statusline+=\ %(%)
+set statusline+=\ %P    "percent through file
 
 " vim:ft=vim
