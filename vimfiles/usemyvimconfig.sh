@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 echo "Copying VIM dotfiles..."
 cp .vimrc ~
 cp -R .vim/ ~
