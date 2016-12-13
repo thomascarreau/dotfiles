@@ -1,7 +1,6 @@
 " Syntastic configurations
 " ------------------------
 
-" Toggles syntastic between active and passive mode
-nmap <silent> <leader>sy :SyntasticToggleMode<cr>
+let g:syntastic_auto_jump = 1
 
 " vim:ft=vim

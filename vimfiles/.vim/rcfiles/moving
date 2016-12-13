@@ -8,6 +8,9 @@ map k gk
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
+" Ez regexp
+nnoremap <leader>S yiw:%s/<C-r>0//g<Left><Left>
+
 " Close the current buffer
 map <leader>bd :Bclose<cr>
 
