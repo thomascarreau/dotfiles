@@ -1,7 +1,0 @@
-" Syntastic configurations
-" ------------------------
-
-let g:syntastic_auto_jump = 1
-nnoremap <leader>sy :SyntasticToggleMode<cr>
-
-" vim:ft=vim

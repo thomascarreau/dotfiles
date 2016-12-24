@@ -19,4 +19,7 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Ez indent
+nnoremap g= gg=G''
+
 " vim:ft=vim

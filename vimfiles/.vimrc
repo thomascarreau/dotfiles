@@ -6,7 +6,7 @@
 "
 " Inspired by Chris Toomey [https://github.com/christoomey].
 " See all of my vimrc style configurations in ~/.vim/rcfiles.
-" Plugin manager: Vundle [https://github.com/VundleVim/Vundle.vim]
+" Plugin manager: vim-plug [https://github.com/VundleVim/Vundle.vim]
 " ----------------------------------------------------------------
 
 
@@ -21,22 +21,18 @@ function! s:SourceConfigFilesIn(directory)
   endfor
 endfunction
 
-
-set nocompatible " required!
-filetype off " required!
-
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'scrooloose/syntastic'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+if has('nvim')
+    Plug 'neomake/neomake'
+else
+    Plug 'vim-syntastic/syntastic'
+endif
 
-call vundle#end()
-
-filetype plugin indent on " required!
-syntax on
+call plug#end()
 
 call s:SourceConfigFilesIn('rcfiles')

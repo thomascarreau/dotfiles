@@ -1,18 +1,18 @@
 myfiles
 =======
 
-Here is the collection of my dotfiles (VIM, tmux, and git).
+Here is the collection of my dotfiles.
 
 VIM
 ---
 
 Plugins that I use :
 
-* [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
+* [vim-plug](https://github.com/junegunn/vim-plug)
 * [vim-commentary](https://github.com/tpope/vim-commentary)
 * [vim-surround](https://github.com/tpope/vim-surround)
 * [vim-repeat](https://github.com/tpope/vim-repeat)
-* [syntastic](https://github.com/vim-syntastic/syntastic)
+* [Neomake](https://github.com/vim-neomake/neomake)
 
 I wrote the little script `usemyvimconfig.sh`. Go in the directory called vimfiles then run it if you want to use my VIM configuration.
 

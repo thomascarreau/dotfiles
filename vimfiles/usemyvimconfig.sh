@@ -8,15 +8,16 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Installing Vundle..."
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+echo "Installing vim-plug..."
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 if [ $? -ne 0 ]; then
     echo >&2 "ERROR!"
     exit 1
 fi
 
 echo "Installing plugins..."
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 if [ $? -ne 0 ]; then
     echo >&2 "ERROR!"
     exit 1

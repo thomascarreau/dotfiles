@@ -7,10 +7,11 @@ set history=700
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" Fast saving
-nmap <leader>w :w<cr>
-
 " To start using the ':Man' command before any manual page was loaded
 runtime ftplugin/man.vim
+
+if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+endif
 
 " vim:ft=vim
