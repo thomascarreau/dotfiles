@@ -9,6 +9,9 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Installing vim-plug..."
+# wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# mkdir -p ~/.vim/autoload
+# mv plug.vim ~/.vim/autoload
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 if [ $? -ne 0 ]; then
