@@ -9,7 +9,6 @@
 " Plugin manager: vim-plug [https://github.com/VundleVim/Vundle.vim]
 " ----------------------------------------------------------------
 
-
 let mapleader = ","
 
 function! s:SourceConfigFilesIn(directory)
