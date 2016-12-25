@@ -35,7 +35,7 @@ case $choice in
         ;;
     2)
         echo "Linking the Vim configuration so Nvim can use it..."
-        mkdir ~/.config
+        # mkdir ~/.config
         ln -s ~/.vim ~/.config/nvim
         ln -s ~/.vimrc ~/.config/nvim/init.vim
         echo "Success!"
