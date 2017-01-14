@@ -28,7 +28,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'neomake/neomake'
 Plug 'lervag/vimtex', { 'for': 'tex' }
-Plug 'Soares/base16.nvim'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
