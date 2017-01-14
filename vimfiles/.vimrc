@@ -12,12 +12,12 @@
 let mapleader = ","
 
 function! s:SourceConfigFilesIn(directory)
-  let directory_splat = '~/.vim/' . a:directory . '/*'
-  for config_file in split(glob(directory_splat), '\n')
-    if filereadable(config_file)
-        execute 'source' config_file
-    endif
-  endfor
+    let directory_splat = '~/.vim/' . a:directory . '/*'
+    for config_file in split(glob(directory_splat), '\n')
+        if filereadable(config_file)
+            execute 'source' config_file
+        endif
+    endfor
 endfunction
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -26,11 +26,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-if has('nvim')
-    Plug 'neomake/neomake'
-else
-    Plug 'vim-syntastic/syntastic'
-endif
+Plug 'neomake/neomake'
+Plug 'lervag/vimtex', { 'for': 'tex' }
+Plug 'Soares/base16.nvim'
 
 call plug#end()
 

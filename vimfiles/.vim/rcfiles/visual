@@ -1,9 +1,13 @@
 " Visual configurations
 " ---------------------
 
-set t_Co=256
-colorscheme molokai
-highlight Normal ctermbg=NONE
-highlight nonText ctermbg=NONE
+if (has("termguicolors"))
+    set termguicolors
+endif
+
+" Theme
+syntax enable
+set background=dark
+colorscheme monokai
 
 " vim:ft=vim

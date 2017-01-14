@@ -10,8 +10,4 @@ set autoread
 " To start using the ':Man' command before any manual page was loaded
 runtime ftplugin/man.vim
 
-if has('nvim')
-    tnoremap <Esc> <C-\><C-n>
-endif
-
 " vim:ft=vim
