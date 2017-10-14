@@ -69,4 +69,7 @@ endif
 " No auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Incremental command live feedback
+set inccommand=nosplit
+
 " vim:ft=vim

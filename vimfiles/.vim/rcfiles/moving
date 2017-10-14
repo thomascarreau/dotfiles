@@ -40,9 +40,10 @@ if has('nvim')
     tnoremap <A-l> <C-\><C-n><C-w>l
     autocmd BufEnter term://* startinsert
 endif
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
 
 " vim:ft=vim

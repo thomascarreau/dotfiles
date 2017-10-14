@@ -9,15 +9,15 @@
 " Plugin manager: vim-plug [https://github.com/VundleVim/Vundle.vim]
 " ----------------------------------------------------------------
 
-let mapleader = ","
+let mapleader = "\<Space>"
 
 function! s:SourceConfigFilesIn(directory)
-    let directory_splat = '~/.vim/' . a:directory . '/*'
-    for config_file in split(glob(directory_splat), '\n')
-        if filereadable(config_file)
-            execute 'source' config_file
-        endif
-    endfor
+  let directory_splat = '~/.vim/' . a:directory . '/*'
+  for config_file in split(glob(directory_splat), '\n')
+    if filereadable(config_file)
+        execute 'source' config_file
+    endif
+  endfor
 endfunction
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -28,7 +28,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'neomake/neomake'
 Plug 'lervag/vimtex', { 'for': 'tex' }
-Plug 'chriskempson/base16-vim'
+Plug 'Soares/base16.nvim'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 

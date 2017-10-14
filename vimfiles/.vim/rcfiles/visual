@@ -8,6 +8,6 @@ endif
 " Theme
 syntax enable
 set background=dark
-colorscheme base16-monokai
+colorscheme oceanicnext
 
 " vim:ft=vim
