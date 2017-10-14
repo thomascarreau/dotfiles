@@ -6,7 +6,7 @@
 "
 " Inspired by Chris Toomey [https://github.com/christoomey].
 " See all of my vimrc style configurations in ~/.vim/rcfiles.
-" Plugin manager: vim-plug [https://github.com/VundleVim/Vundle.vim]
+" Plugin manager: vim-plug [https://github.com/junegunn/vim-plug]
 " ----------------------------------------------------------------
 
 let mapleader = "\<Space>"
