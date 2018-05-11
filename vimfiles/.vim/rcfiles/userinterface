@@ -63,13 +63,15 @@ set mouse=a
 " Hybrid numbers
 set rnu
 if v:version > 703
-  set number
+    set number
 endif
 
 " No auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Incremental command live feedback
-set inccommand=nosplit
+if has('nvim')
+    set inccommand=nosplit
+endif
 
 " vim:ft=vim

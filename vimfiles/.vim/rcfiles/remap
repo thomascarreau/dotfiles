@@ -12,4 +12,7 @@ noremap ( {
 noremap ) }
 noremap Q @q
 
+" Ez save
+noremap <leader><space> :w<CR>
+
 " vim:ft=vim
