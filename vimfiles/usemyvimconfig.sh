@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 
-echo "Copying VIM dotfiles..."
+echo "Copying Vim dotfiles..."
 cp .vimrc ~
 cp -R .vim/ ~
 if [ $? -ne 0 ]; then
-    echo >&2 "ERROR!"
+    echo >&2 "ERROR: Cannot copy Vim dotfiles!"
     exit 1
 fi
 
@@ -24,7 +24,7 @@ fi
 echo "Installing plugins..."
 vim +PlugInstall +qall
 if [ $? -ne 0 ]; then
-    echo >&2 "ERROR!"
+    echo >&2 "Error: Cannot install plugins!"
     exit 1
 fi
 
@@ -41,5 +41,5 @@ case $choice in
         ln -s ~/.vimrc ~/.config/nvim/init.vim
         echo "Success!"
         ;;
-    *) echo >&2 "Invalid option!";;
+    *) echo >&2 "ERROR: Invalid option!";;
 esac
