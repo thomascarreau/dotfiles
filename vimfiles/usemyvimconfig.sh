@@ -12,13 +12,14 @@ echo "Installing vim-plug..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 if [ $? -ne 0 ]; then
-    echo >&2 "ERROR!"
-    exit 1
+    wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    if [ $? -ne 0 ]; then
+        echo >&2 "ERROR: Cannot download vim-plug!"
+        exit 1
+    fi
+    mkdir -p ~/.vim/autoload
+    mv plug.vim ~/.vim/autoload
 fi
-# If you can't install curl...
-# wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# mkdir -p ~/.vim/autoload
-# mv plug.vim ~/.vim/autoload
 
 echo "Installing plugins..."
 vim +PlugInstall +qall
