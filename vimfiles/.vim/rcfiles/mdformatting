@@ -15,4 +15,15 @@ nnoremap <leader>mu1 :call UnderlineHeading(1)<cr>
 nnoremap <leader>mu2 :call UnderlineHeading(2)<cr>
 nnoremap <leader>mu3 :call UnderlineHeading(3)<cr>
 
+function! CreateList(N)
+    if a:N > 1
+        normal! I1.
+        let i = 1
+        while i < a:N
+            normal! yyp
+            let i += 1
+        endwhile
+    endif
+endfunction
+
 " vim:ft=vim
