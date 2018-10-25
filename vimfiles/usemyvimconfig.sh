@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 echo "Copying Vim dotfiles..."
 cp .vimrc ~
