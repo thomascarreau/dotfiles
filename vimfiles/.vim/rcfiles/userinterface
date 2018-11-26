@@ -74,4 +74,7 @@ if has('nvim')
     set inccommand=nosplit
 endif
 
+" 80 columns limit
+set cc=80
+
 " vim:ft=vim
