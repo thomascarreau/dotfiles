@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-Here is the collection of my dotfiles.
+Here is a repository for my dotfiles.
 
 Vim
 ---
