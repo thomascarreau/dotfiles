@@ -1,7 +1,0 @@
-" Spell checking configurations
-" -----------------------------
-
-" Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spelllang=fr spell!<cr>
-
-" vim:ft=vim

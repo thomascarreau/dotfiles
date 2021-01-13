@@ -4,7 +4,7 @@
 	branch = auto
 [user]
 	name = Thomas Carreau
-	email = thomascarreau7@gmail.com
+	email = thomascarreau@protonmail.com
 [alias]
     ci = commit
     co = checkout

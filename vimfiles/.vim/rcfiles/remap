@@ -7,11 +7,6 @@ map 0 ^
 " Not wanted command mode
 noremap q: :q
 
-" AZERTY issues
-noremap ( {
-noremap ) }
-noremap Q @q
-
 " Ez save
 noremap <leader><space> :w<CR>
 

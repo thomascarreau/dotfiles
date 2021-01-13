@@ -10,8 +10,13 @@ syntax on
 set t_Co=256
 set background=dark
 
-let g:gruvbox_contrast_dark = 'medium'
+let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'soft'
 colorscheme gruvbox
+
+" Highligthing spelling errors
+" (must be placed after the last last line altering the colorscheme)
+hi clear SpellBad
+hi SpellBad cterm=underline
 
 " vim:ft=vim

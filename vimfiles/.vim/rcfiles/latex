@@ -1,9 +1,29 @@
 " vimlatex configuraiton
 " ----------------------
 
+" To make it run with outdated Neovim version
+let g:vimtex_version_check = 0
+
 " Defining Okular as default PDF viewer
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 
-" set ft=vim
+let g:vimtex_quickfix_open_on_warning = 'false'
+
+" Spell checking
+autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_us
+
+command! CorrectCommonTypos call CorrectCommonTypos()
+function! CorrectCommonTypos()
+    execute ':silent! %s/    / /gc'
+    execute ':silent! %s/   / /gc'
+    execute ':silent! %s/  / /gc'
+    execute ':silent! %s/ref\.\C/Ref\./gc'
+    execute ':silent! %s/table\C/Table/gc'
+    execute ':silent! %s/fig\.\C/Fig\./gc'
+    execute ':silent! %s/\.\\cite/\.\~\\cite/gc'
+    execute ':silent! %s/\.\\ref/\.\~\\ref/gc'
+endfunction
+
+" vim:ft=vim

@@ -2,7 +2,7 @@
 " ========
 "
 " Author:       Thomas Carreau [https://github.com/thomascarreau]
-" Source:       https://github.com/thomascarreau/myfiles
+" Source:       https://github.com/thomascarreau/dotfiles
 "
 " Inspired by Chris Toomey [https://github.com/christoomey].
 " See all of my vimrc style configurations in ~/.vim/rcfiles.
@@ -28,13 +28,13 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'neomake/neomake'
 Plug 'lervag/vimtex', { 'for': 'tex' }
-" Plug 'Soares/base16.nvim'
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'flazz/vim-colorschemes'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
+Plug 'jiangmiao/auto-pairs'
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
 

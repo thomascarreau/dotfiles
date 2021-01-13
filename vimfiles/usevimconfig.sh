@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 echo "Copying Vim dotfiles..."
-cp .vimrc ~
-cp -R .vim/ ~
+cp .vimrc $HOME
+cp -R .vim/ $HOME
 if [ $? -ne 0 ]; then
     echo >&2 "ERROR: Cannot copy Vim dotfiles!"
     exit 1
@@ -17,8 +17,8 @@ if [ $? -ne 0 ]; then
         echo >&2 "ERROR: Cannot download vim-plug!"
         exit 1
     fi
-    mkdir -p ~/.vim/autoload
-    mv plug.vim ~/.vim/autoload
+    mkdir -p $HOME/.vim/autoload
+    mv plug.vim $HOME/.vim/autoload
 fi
 
 echo "Installing plugins..."
@@ -36,8 +36,8 @@ case $choice in
         ;;
     2)
         echo "Linking the Vim configuration so Nvim can use it..."
-        ln -s ~/.vim ~/.config/nvim
-        ln -s ~/.vimrc ~/.config/nvim/init.vim
+        ln -s $HOME/.vim $HOME/.config/nvim
+        ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
         echo "Success!"
         ;;
     *) echo >&2 "ERROR: Invalid option!";;
