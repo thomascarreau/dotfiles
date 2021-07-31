@@ -1,7 +1,0 @@
-" Gnuplot configurations
-" ----------------------
-
-autocmd BufRead *.plt set ft=gnuplot
-autocmd FileType gnuplot setlocal commentstring=#\ %s
-
-" vim:ft=vim

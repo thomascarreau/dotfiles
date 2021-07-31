@@ -7,7 +7,7 @@ map 0 ^
 " Not wanted command mode
 noremap q: :q
 
-" Ez save
+" Easy save
 noremap <leader><space> :w<CR>
 
 " vim:ft=vim

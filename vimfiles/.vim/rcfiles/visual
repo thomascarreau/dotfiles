@@ -15,7 +15,7 @@ let g:gruvbox_contrast_light = 'soft'
 colorscheme gruvbox
 
 " Highligthing spelling errors
-" (must be placed after the last last line altering the colorscheme)
+" (must be placed after the last line altering the colorscheme)
 hi clear SpellBad
 hi SpellBad cterm=underline
 

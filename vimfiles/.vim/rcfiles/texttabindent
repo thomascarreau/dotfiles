@@ -18,14 +18,15 @@ au Filetype tex set textwidth=79
 " Use spaces instead of tabs
 set expandtab
 
-"Auto indent
+" Auto indent
 set ai 
 
 " Linebreak on 500 characters
 set lbr
 set tw=500
 
-set wrap "Wrap lines
+" Wrap lines
+set wrap
 
 " Ez indent
 nnoremap g= gg=G''

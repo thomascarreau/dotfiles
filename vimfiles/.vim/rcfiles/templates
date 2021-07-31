@@ -1,7 +1,0 @@
-" Templates
-" ---------
-
-au BufNewFile *.h 0r ~/.vim/templates/skeleton.h
-au BufNewFile *.plt 0r ~/.vim/templates/skeleton.plt
-
-" vim:ft=vim

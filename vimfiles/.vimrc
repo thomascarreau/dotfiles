@@ -26,7 +26,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'neomake/neomake'
+Plug 'dense-analysis/ale'
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'godlygeek/tabular'
