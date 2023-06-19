@@ -38,6 +38,7 @@ case $choice in
         echo "Linking the Vim configuration so Nvim can use it..."
         ln -s $HOME/.vim $HOME/.config/nvim
         ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
+        mv coc-settings.json $HOME/.config/nvim/coc-settings.json
         echo "Success!"
         ;;
     *) echo >&2 "ERROR: Invalid option!";;

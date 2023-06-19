@@ -1,0 +1,7 @@
+{
+  "coc.preferences.formatOnSave": true,
+  "python.linting.pylamaEnabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pydocstyleEnabled": true,
+  "python.formatting.provider": "black"
+}
