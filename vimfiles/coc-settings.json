@@ -1,7 +1,33 @@
 {
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": [
+        "start"
+      ],
+      "filetypes": [
+        "sh"
+      ]
+    },
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": [
+        "compile_flags.txt",
+        "compile_commands.json"
+      ],
+      "filetypes": [
+        "c",
+        "cc",
+        "cpp",
+        "c++",
+        "objc",
+        "objcpp"
+      ]
+    },
+  }
   "coc.preferences.formatOnSave": true,
-  "python.linting.pylamaEnabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.pydocstyleEnabled": true,
-  "python.formatting.provider": "black"
+  "python.formatting.provider": "ruff",
+  "python.linting.ruffEnabled": false,
+  "pyright.organizeimports.provider": "ruff",
+  "pyright.testing.provider": "pytest"
 }
