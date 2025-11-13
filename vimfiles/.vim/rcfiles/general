@@ -10,4 +10,7 @@ set autoread
 " To start using the ':Man' command before any manual page was loaded
 runtime ftplugin/man.vim
 
+" Use system clipboard
+set clipboard+=unnamed
+
 " vim:ft=vim
